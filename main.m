@@ -10,7 +10,7 @@ drcomp = dr_compressor(song1);
 n = 4096; % window
 [~,differences_vect] = drcomp.maxmin_window(drcomp.track.channelL,n); % Left channel
 
-fprintf('Average value (not ignoring complete silence samples -- 0s): %.7f\n',drcomp.avg_difference);
+fprintf('Average max-min difference value: %.7f\n',drcomp.avg_difference);
 
 % % Start equalizer, and get FFT
 % fprintf('Calculating FFT...\n');

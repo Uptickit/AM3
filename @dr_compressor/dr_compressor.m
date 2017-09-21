@@ -32,6 +32,7 @@ classdef dr_compressor < handle % Makes sure there's only "one type of instance"
                 diff = max_window-min_window; % Return max-min
                 differences_vect(i) = diff;
             end
+            differences_vect(differences_vect==0) = [];
             obj.avg_difference = mean(differences_vect(n_samples:end)); % Get the average of all those differences
         end
     end
